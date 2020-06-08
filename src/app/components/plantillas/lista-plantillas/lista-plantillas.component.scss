@@ -1,0 +1,29 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    padding: 3%;
+    display: inline-flex;
+    background-color: rgba(167, 159, 160, 0.815);
+    border-radius: 49px;
+    flex-wrap: wrap!important;
+    height: 480px;
+    max-width: 1200px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    img{
+        width:190px;
+        height:300px;
+        cursor:pointer;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+.container{
+display: absolute;
+}
+}
+
+
+

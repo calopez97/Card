@@ -1,0 +1,12 @@
+<div class="container">
+    <h1> Modalidades de Pago</h1>
+    <div class="pagos">
+        <div class="metpagos" *ngFor="let pagos of metodospago">
+            <div class="metodo">
+                <a href="{{pagos.link}}">
+                    <img src="{{pagos.imagen}}">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

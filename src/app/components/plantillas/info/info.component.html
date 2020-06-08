@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="infouser">
+        <div class="datauser">
+            <form class="formuser" [formGroup]="form" (ngSubmit)="save($event)">
+                <div class="user">
+                    <label class="labels">Nombre a mostrar!</label>
+                    <br>
+                    <input id="controls" type="text" formControlName="name">
+                    <br>
+                    <div *ngIf="form.get('name').errors && form.get('name').touched">
+                        <p *ngIf="form.get('name').hasError('required')">
+                         * Este campo es requerido
+                        </p>
+                    </div>
+                </div>
+                <div class="user">
+                    <label class="labels">Titulo o Profesión a mostrar!</label>
+                    <br>
+                    <input id="controls" type="text" formControlName="titleprofession">
+                    <br>
+                    <div *ngIf="form.get('titleprofession').errors && form.get('titleprofession').touched">
+                        <p *ngIf="form.get('titleprofession').hasError('required')">
+                          * Este campo es requerido
+                        </p>
+                    </div>
+                </div>
+                <button type="submit" >Cambiar!</button>
+            </form>
+            <div class="uploadimage" role="button">
+                <div class="image">
+                    <img src="https://www.iconsdb.com/icons/preview/color/440EE6/upload-3-xxl.png">
+                    <h1>SUBIR LOGO</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="range-slider">
+        <h1>Tamaño de letra</h1>
+        <div class="slider">
+            <div class="slider-container">
+                <input type="range" id="slider" class="slider" value="{{value}}" min="0px" max="24px">
+            </div>
+        </div>
+    </div>
+    <div class="colores">
+        <h1 id="coletras">Color del Nombre</h1>
+        <div class="paletacolores">
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
+                <div [style.color]="items.color"></div>
+            </div>
+            <div id="selectcolor"></div>
+        </div>
+    </div>
+    <div class="colores">
+        <h1 id="coletras">Color del Titulo</h1>
+        <div class="paletacolores">
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
+                <div [style.color]="items.color"></div>
+            </div>
+            <div id="selectcolor"></div>
+        </div>
+    </div>
+</div>

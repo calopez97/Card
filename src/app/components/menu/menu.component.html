@@ -1,0 +1,5 @@
+<div class="menu">
+    <button class="card" *ngFor="let button of buttons" (click)="changeTitle(button.title)" routerLink="{{ button.router }}" >
+        <span class="options">{{ button.title }}</span>
+    </button>
+</div> 

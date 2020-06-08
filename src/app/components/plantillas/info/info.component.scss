@@ -1,0 +1,201 @@
+.container {
+    width: 95%;
+    display: inline-flex;
+    background-color:  rgba(167, 159, 160, 0.815);
+    border-radius: 49px;
+    flex-wrap: wrap !important;
+    height: 480px;
+    max-height: 800px;
+    overflow: scroll;
+}
+.infouser {
+    width: 100%;
+    padding: 2%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.datauser {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: contents;
+    .uploadimage {
+        display: block;
+        margin: 1%;
+        cursor: pointer;
+        width: 35%;
+        height: 115px;
+        background: linear-gradient(90deg, #e4e1e1, rgb(243, 240, 240), rgb(235, 220, 220), rgb(255, 255, 255));
+        border-radius: 15px;
+        box-shadow: -3px 4px 2px  rgba(167, 159, 160, 0.815) !important;
+        .image {
+            margin: 0;
+            height: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 55px;
+            height: 50px;
+            transform: translate(15px, 10px);
+        }
+
+        h1 {
+            color: #440ee6;;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .formuser {
+        width: 65%;
+        padding: 1%;
+        margin: 0;
+        .user {
+            margin-top: 15px;
+            padding: 1%;
+        }
+        .labels {
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            font-size: 22px;
+            color: #440ee6;
+            width: 100%;
+        }
+
+        input {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            box-shadow: 2px 3px 2px  rgba(167, 159, 160, 0.815) !important;
+        }
+
+        button {
+            font-size: 16px;
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            width: 45%;
+            margin-top: 10px;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            color: black;
+            height: 35px;
+            border: 1px solid gray;
+            overflow: hidden;
+            transition: 0.5s;
+            box-shadow: -3px 4px 2px  rgba(167, 159, 160, 0.815) !important;
+        }
+
+        button:hover {
+            background-color: lawngreen;
+            border: 1px solid green;
+            width: 50%;
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+        button:focus {
+            outline: none;
+        }
+        p {
+            color: red;
+        }
+    }  
+}
+.range-slider{
+    display:inline-flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color:  #440ee6;
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+.slider{
+    width: 60%;
+    height: 20px;
+    transform: translate(10px,4px);
+}
+.slider-container{
+    position: relative;
+}
+.slider-container .slider{
+    position: relative;
+    z-index: 2;
+    -webkit-appearance: none;
+    margin:0;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(75deg, #6798d3, #323ed2);
+    outline: none;
+}
+
+.slider-container .slider::-webkit-slider-thumb{
+    -webkit-appearance: none; 
+    width: 22px;
+    height: 22px;
+    background-color: #440ee6;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius:50%;
+    transform: rotate(45deg) translate(0%,0%);
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255,0);
+    transition: .3s ease-in-out;    
+}
+.slider-container .slider::-webkit-slider-thumb:hover{
+    box-shadow: 0 0 0 5px rgb(255, 255, 255,1);
+}
+.colores {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    h1{
+        width: 40%;
+        text-align: center;
+        color:  #440ee6;
+        margin: 10px;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+.paletacolores {
+    display: flex;
+    padding: 1%;
+    width: 80%;
+    height: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .color {
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+    } 
+}
+#selectcolor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/edition/100/pen_3-512.png);
+    background-size:cover;
+    cursor: pointer;
+}
+
+    
