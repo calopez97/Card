@@ -35,18 +35,15 @@
             display: grid;
             align-items: center;
             justify-content: center;
+            justify-items: center;
         }
-        img {
-            width: 55px;
-            height: 50px;
-            transform: translate(15px, 10px);
-        }
-
         h1 {
             color: #440ee6;;
             margin: 0;
             align-items: center;
             justify-content: center;
+            display: contents;
+            
         }
     }
 
@@ -92,11 +89,12 @@
         }
 
         button:hover {
-            background-color: lawngreen;
-            border: 1px solid green;
+            background:linear-gradient(40deg,#440ee6,rgb(87, 36, 240),#683BF0,rgb(112, 70, 236),#6798D3, #323ED2);
+            border: 1px solid rgb(77, 0, 128);
             width: 50%;
             transition: 0.5s;
             opacity: 1;
+            color: white;
         }
 
         button:focus {

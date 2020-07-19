@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListaPlantillasComponent } from './components/plantillas/lista-plantillas/lista-plantillas.component';
-import { CardPrincipalComponent } from './components/card-principal/card-principal.component';
+
 import { IconsComponent } from './components/templates/icons/icons.component';
 import { LogoComponent } from './components/templates/logo/logo.component';
 
@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SocialnetworkComponent } from './components/plantillas/socialnetwork/socialnetwork.component';
 import { LinkSocialNetworkComponent } from './components/plantillas/link-social-network/link-social-network.component';
 import { PagoComponent } from './components/plantillas/pago/pago.component';
+import { PreviewComponent } from './components/plantillas/preview/preview.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +33,13 @@ import { PagoComponent } from './components/plantillas/pago/pago.component';
     IconsComponent,
     LogoComponent,
     ListaPlantillasComponent,
-    CardPrincipalComponent,
+    
     SelLogoComponent,
     InfoComponent,
     SocialnetworkComponent,
     LinkSocialNetworkComponent,
     PagoComponent,
+    PreviewComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,10 +21,6 @@
             align-items: center;
             margin-left: 35%;
         }
-        img {
-            width: 35px;
-            height: 30px;
-        }
     }
     .listlogos {
         margin-top: 20px;
@@ -140,6 +136,7 @@ h1 {
     text-align: center;
     font-size: 22px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    display: inline;
 }
 
 section {

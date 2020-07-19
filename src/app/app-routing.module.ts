@@ -1,6 +1,6 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CardPrincipalComponent } from './components/card-principal/card-principal.component';
+
 import { ListaPlantillasComponent } from './components/plantillas/lista-plantillas/lista-plantillas.component';
 import {SelLogoComponent} from './components/plantillas/sel-logo/sel-logo.component';
 import { InfoComponent } from './components/plantillas/info/info.component';

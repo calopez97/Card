@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 
 
@@ -42,7 +43,7 @@ colores = [
 ]
 
 
-  constructor() { 
+  constructor( private dataService: DataService ) { 
     this.BuildForm();
   }
 
@@ -65,6 +66,7 @@ colores = [
     event.preventDefault();
     if(this.form.valid){
     const value=this.form.value;
+    this.dataService.nombre$.emit(value)
     console.log(value); 
   }else{
     this.form.markAllAsTouched();
