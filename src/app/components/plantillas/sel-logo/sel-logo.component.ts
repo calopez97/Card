@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelLogoComponent implements OnInit {
   
+  logos=[
+    {
+      "id":1,
+      "logo":"https://icardlink.me/recursos/2020/04/1280px-Service_mark.svg.png",
+    },
+    {
+      "id":3,
+      "logo":"https://icardlink.me/recursos/2020/05/Logo-xavier-arteaga-rojo-final-web-blanco.png",
+    },
+    {
+      "id":4,
+      "logo":"https://icardlink.me/recursos/2020/05/logo-ejemplo.png",
+    },
+  ]
   colores = [
     {
       "id":1,
@@ -39,7 +53,9 @@ export class SelLogoComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  
+  pass(dato){
+    window.localStorage.setItem("selectLogo", JSON.stringify(dato));
+  }
 }
    
 

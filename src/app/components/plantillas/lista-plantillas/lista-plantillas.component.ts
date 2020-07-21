@@ -20,78 +20,57 @@ export class ListaPlantillasComponent implements OnInit {
       {
         "id": 1,
         "Name": "Galileo Galilei",
-        "imagelink": "https://www.icardlink.com/recursos/galileo.png"
+        "imagelink": "https://www.icardlink.com/recursos/galileo.png",
+        "color":"#333333",
       },
       {
         "id": 2,
         "Name": "Marilyn Monroe",
-        "imagelink": "https://www.icardlink.com/recursos/Anastasia-marin.png"
+        "imagelink": "https://www.icardlink.com/recursos/Anastasia-marin.png",
+        "color":"#683BF0",      
       },
       {
         "id": 3,
         "Name": "Pasteur",
-        "imagelink": "https://www.icardlink.com/recursos/pasteur.png"
+        "imagelink": "https://www.icardlink.com/recursos/pasteur.png",
+        "color":"#FFCE33",
       },
       {
         "id": 4,
         "Name": "Oscuro Digital",
-        "imagelink": "https://www.icardlink.com/recursos/faker.png"
+        "imagelink": "https://www.icardlink.com/recursos/faker.png",
+        "color":"#142E7E",
       },
       {
         "id": 5,
         "Name": "Color Afable",
-        "imagelink": "https://www.icardlink.com/recursos/stevens-morphy.png"
+        "imagelink": "https://www.icardlink.com/recursos/stevens-morphy.png",
+        "color":"#2F8BCE",
       },
       {
         "id": 6,
         "Name": "Azul suave Corporativo",
-        "imagelink": "https://www.icardlink.com/recursos/ramiro-fraga.png"
+        "imagelink": "https://www.icardlink.com/recursos/ramiro-fraga.png",
+        "color":"#0A6EE5",
       },
       {
         "id": 7,
         "Name": "Salpicadura Colorida",
-        "imagelink": "https://www.icardlink.com/recursos/gualberto-ibarreto.png"
+        "imagelink": "https://www.icardlink.com/recursos/gualberto-ibarreto.png",
+        "color":"#22A7AB",
       },
       {
         "id": 8,
         "Name": "Corporativo & Formal",
-        "imagelink": "https://www.icardlink.com/recursos/alejandro-magno.png"
+        "imagelink": "https://www.icardlink.com/recursos/alejandro-magno.png",
+        "color":"#52545B",
       },
       {
         "id": 9,
         "Name": "Sobrio Elegante",
-        "imagelink": "https://www.icardlink.com/recursos/jose.png"
+        "imagelink": "https://www.icardlink.com/recursos/jose.png",
+        "color":"#BCBEC5",
       },
-      {
-        "id": 10,
-        "Name": "Gris y Amarillo",
-        "imagelink": "https://www.icardlink.com/recursos/darwin.png"
-      },
-      {
-        "id": 11,
-        "Name": "Colorido Audaz",
-        "imagelink": "https://www.icardlink.com/recursos/DEBRA.png"
-      },
-      {
-        "id": 12,
-        "Name": "Rojo Juvenil",
-        "imagelink": "https://www.icardlink.com/recursos/yoav-1.png"
-      },
-      {
-        "id": 13,
-        "Name": "Azul Sombrio",
-        "imagelink": "https://www.icardlink.com/recursos/IRIEL-BADILLO-SELLER.png"
-      },
-      {
-        "id": 14,
-        "Name": "Oscuro Impresionante",
-        "imagelink": "https://www.icardlink.com/recursos/KLAUS.png"
-      },
-      {
-      "id":15,
-      "Name": "Gutenberg",
-      "imagelink": "https://www.icardlink.com/recursos/gutenberg.png"
-    }  
     ];
 
   }
@@ -99,7 +78,5 @@ export class ListaPlantillasComponent implements OnInit {
   pass(dato){
     this.data = dato;
     window.localStorage.setItem("dataSelect", JSON.stringify(dato));
-    // this.activateEvents = dato;
-    // this.activateEvents.emit(dato);
   }
 }

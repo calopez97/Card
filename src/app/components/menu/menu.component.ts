@@ -15,32 +15,32 @@ buttons = [
    {
      "id": 1,
      'router': 'select-card',
-     'title': '¡Selecciona una Plantilla!'
+     'title': '¡Select Template!'
    },
    {
     "id": 2,
     'router': 'select-logo',
-    'title': '¡Selecciona un LOGO!'
+    'title': '¡Select LOGO!'
   },
   {
     "id": 3,
     'router': 'info',
-    'title': '¡Tu Información!'
+    'title': '¡Information!'
   },
   {
     "id": 4,
     'router': 'select-redes',
-    'title': '¡Escoje tus redes sociales!'
+    'title': '¡Select your social networks!'
   },
   {
     "id": 5,
     'router': 'link-network',
-    'title': '¡Vincula tus redes sociales!'
+    'title': '¡Link your social networks!'
   }, 
   {
     "id": 6,
     'router': 'pago',
-    'title': '¡PAGO!'
+    'title': '¡Payment methods!'
   }
  ]
 

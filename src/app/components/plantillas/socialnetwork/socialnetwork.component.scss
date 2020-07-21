@@ -3,9 +3,10 @@
     width: 90%;
     padding: 3%;
     display: inline-flex;
-    background-color: rgba(167, 159, 160, 0.815);
+    background-color: rgba(192, 192, 192, 0.80);
     border-radius: 49px;
     flex-wrap: wrap!important;
+    height: 450px;
     .itemCard{
         margin: 5px;
         border-radius: 15px;;
@@ -79,10 +80,9 @@
     box-shadow: 0 0 0 5px rgb(255, 255, 255,1);
 }
 .colores {
-    margin-top: 20px;
     display: flex;
     width: 100%;
-    height: 60px;
+    height: 100px;
     h1{
         width: 40%;
         text-align: center;

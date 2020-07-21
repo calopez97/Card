@@ -10,8 +10,8 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements OnInit {
-  value: number = 100;
   
+  value:Number=28; 
 
 
 form: FormGroup; 
@@ -43,7 +43,7 @@ colores = [
 ]
 
 
-  constructor( private dataService: DataService ) { 
+  constructor( ) { 
     this.BuildForm();
   }
 
@@ -66,14 +66,28 @@ colores = [
     event.preventDefault();
     if(this.form.valid){
     const value=this.form.value;
-    this.dataService.nombre$.emit(value)
-    console.log(value); 
+    window.localStorage.setItem("Values", JSON.stringify(value));
   }else{
     this.form.markAllAsTouched();
   }
   }
 
   
+  passColor(color){
+    window.localStorage.setItem("selectColor", JSON.stringify(color)); 
+  }
+
+  passColor2(col){
+    window.localStorage.setItem("selectIconColor", JSON.stringify(col)); 
+  }
+
+  pass(value){
+    window.localStorage.setItem("size", value);
+    document.getElementById('temp').innerHTML= value +  ( 'px');
+  }
+
+
+}
 
   
-}
+

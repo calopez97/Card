@@ -1,31 +1,36 @@
 <div class="container">
-    <div class="card">
+    <div class="card" [style.background-color]="jsonData.color">
         <div class="logo">
             <div class="img-logo">
-                <img style="width: 180px;" src="https://icardlink.me/recursos/2020/05/logo-ejemplo.png" alt="">
+                <img style="width: 180px;" src={{jsonLogo.logo}}  alt="">
             </div>
         </div>
         <div class="user">
             <div class="img-user">
-                <img src="https://icardlink.me/recursos/2020/05/galileo-galilei.jpg" alt="">
+                <img src={{profileimage}} alt="">
             </div>
             <div class="name-profile">
-                <h2>Nombre</h2>
-                <h4>Profesión</h4>
+                <h2 [style.color]="jsonColor.color" style="font-size:{{fontSize}}px;">{{values.name}}</h2>
+                <h4 [style.color]="jsonIconColor.color" style="font-size:16px;">{{values.titleprofession}}</h4>
             </div>
         </div>
         <div class="network">
-            <h3>Contáctame!</h3>
+            <h3 [style.color]="jsonColor.color">Do you want contact me?</h3>
             <div class="social-networks">
-             <a class="social-network-facebook "href="#"><i class="fab fa-facebook-square fa-3x" ></i></a>
-             <a class="social-network-facebook "href="#"><i class="fab fa-twitter-square fa-3x" ></i></a>
-             <a class="social-network-facebook "href="#"><i class="fab fa-instagram fa-3x" ></i></a>
-             <a class="social-network-facebook "href="#"><i class="fab fa-whatsapp-square fa-3x" ></i></a>
-             <a class="social-network-facebook "href="#"><i class="fas fa-envelope-square fa-3x" ></i></a>
+             <img style="background-color:{{BkColor.color}};
+              width: {{IconSize}}px;
+              height: {{IconSize}}px;
+              border-radius: {{roudingValue}}%;
+              "
+              src="{{icons.link}}"  alt="">
             </div>
         </div>
         <div class="info">
-            <h2>www.paginaweb.com</h2>
+            <h2 [style.color]="jsonColor.color">www.paginaweb.com</h2>
         </div>
     </div>
-</div>
+
+    <div class="preview">
+        <h1>PREVIEW</h1>
+    </div>
+</div> 

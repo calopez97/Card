@@ -1,15 +1,13 @@
 .container{
-    width: 100%;
-    height: 100%;
-    display: flex;
+    display: block;
     border: 0%;
     margin:0%;
     box-sizing: border-box;
-    padding:5%;
+    margin-right: 50px;
     .card{
         // background-image: url(https://ilinkcard.com/wp-content/uploads/revslider/home-1/cards_0005_Capa-4-min.png);
         // background-size: cover;
-        background:linear-gradient(90deg,#440ee6,rgb(87, 36, 240),#683BF0,rgb(112, 70, 236),#6798D3, #323ED2);
+        background-color:linear-gradient(90deg,#440ee6,rgb(87, 36, 240),#683BF0,rgb(112, 70, 236),#6798D3, #323ED2);
         justify-content: center;
         justify-items: center;
         align-items: center;
@@ -30,6 +28,9 @@
             .img-logo{
                 margin: 2%;
                 padding: 3%;
+                img{
+                    background-size: cover;
+                }
             }
         }
         .user{
@@ -44,7 +45,8 @@
                 height: 100%;
             }
             img{
-                width:165px; 
+                margin-top:5px;
+                width:155px; 
                 border-radius: 50%; 
                 border: 4px solid #6798D3;
                 box-shadow: 6px 4px 9px 4px rgb(66 61 61 / 82%);
@@ -74,7 +76,7 @@
             .social-networks{
                 width: 100%;
             }
-            .social-networks a{
+            img{
                 width: 30px;
                 height: 30px;
                 margin-left: 10px;
@@ -93,6 +95,26 @@
                 color: white;
             }
         }
+    }
+
+    .preview{
+        color: whitesmoke;
+    text-align: center;
+    margin-left: 0%;
+    background:linear-gradient(90deg,#440ee6,rgb(87, 36, 240),#683BF0,rgb(112, 70, 236));
+    height: 30px;
+    border-radius: 50px;
+    padding: 4%;
+    margin: 5%;
+    width: 89%;
+
+    h1{
+        margin:0%;
+        padding:0%;
+        text-align: center;
+        margin-top: 6px;
+    height: 30px;
+    }
     }
 
     h2,h3,h4{

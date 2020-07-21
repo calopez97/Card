@@ -3,73 +3,15 @@
         <div class="image">
             <h1 style="color:white; margin-left: 30px;">
                 <i class="fas fa-upload"></i>
-                     SUBIR LOGO</h1>
+                     UPLOAD LOGO</h1>
         </div>
+    </div>
+    <div class="titulologos">
+            <h1>Predesigned Logos</h1>
     </div>
     <div class="listlogos">
-        <div class="titulologos">
-            <h1>Logos Prediseñados</h1>
-        </div>
-        <div class="logos">
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-            <div class="logo">
-                <section></section>
-                <h1 style="color: #2349f5;">Your logo</h1>
-            </div>
-        </div>
-    </div>
-    <div class="range-slider">
-        <h1 style="color:  #440ee6">Tamaño de letra</h1>
-        <div class="slider">
-            <div class="slide-container">
-                <span class="bar"><span class="fill"></span></span>
-                <input type="range" id="slider" class="slider" value="5" min="1" max="100">
-            </div>
-        </div>
-    </div>
-    <div class="colores">
-        <h1 id="coletras" style="color:#440ee6">Color de letras</h1>
-        <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
-                <div [style.color]="items.color"></div>
-            </div>
-            <div id="selectcolor"></div>
-        </div>
-    </div>
-    <div class="colores">
-        <h1 id="coletras" style="color:#440ee6">Color de Icono</h1>
-        <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
-                <div [style.color]="items.color"></div>
-            </div>
-            <div id="selectcolor"></div>
+        <div class="logos"*ngFor="let item of logos"  (click)= pass(item)>
+            <img src="{{item.logo}}" class="logo" style="background-size: cover;">
         </div>
     </div>
 </div>

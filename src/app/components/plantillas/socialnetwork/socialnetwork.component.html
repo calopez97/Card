@@ -1,37 +1,28 @@
 <div class="container">
     <section class="itemCard" *ngFor="let network of networks">
-        <button style="background-image: url({{network.link}}); background-size: cover;"></button>
+        <button style="background-image: url({{network.link}}); background-size: cover;" (click)=pass(network)></button>
     </section>
     <div class="range-slider">
-        <h1>Tamaño Icono</h1>
+        <h1>Icon Size</h1>
         <div class="slider">
             <div class="slider-container">
-                <input type="range" id="slider" class="slider" value="50" min="0px" max="24px">
+                <input type="range" id="slider" class="slider" value="30" min="25" max="50" (input)="iconSize($event.target.value)">
             </div>
         </div>
     </div>
     <div class="range-slider">
-        <h1>Redondeo de esquinas</h1>
+        <h1>Rouding Corners</h1>
         <div class="slider">
             <div class="slider-container">
-                <input type="range" id="slider" class="slider" value="50" min="0px" max="24px">
+                <input type="range" id="slider" class="slider" value="1" min="1" max="50" (input)="rouding($event.target.value)"> 
             </div>
         </div>
     </div>
     <div class="colores">
-        <h1 id="coletras">Color del Icono</h1>
+        <h1 id="coletras">Icon Color</h1>
         <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color" (click)=passBkColor(items)>
                 <div [style.color]="items.color"></div>
-            </div>
-            <div id="selectcolor"></div>
-        </div>
-    </div>
-    <div class="colores">
-        <h1 id="coletras">Color de Fondo</h1>
-        <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color">
-                <div [style.color]="items.color"></div>    
             </div>
             <div id="selectcolor"></div>
         </div>
