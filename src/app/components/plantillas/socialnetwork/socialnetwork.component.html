@@ -1,6 +1,6 @@
 <div class="container">
     <section class="itemCard" *ngFor="let network of networks">
-        <button style="background-image: url({{network.link}}); background-size: cover;" (click)=pass(network)></button>
+        <button style="background-image: url({{network.link}}); background-size: cover;" (click)=pass(network.link)></button>
     </section>
     <div class="range-slider">
         <h1>Icon Size</h1>
@@ -21,10 +21,12 @@
     <div class="colores">
         <h1 id="coletras">Icon Color</h1>
         <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color" (click)=passBkColor(items)>
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color" (click)=passBkColor(items.color)>
                 <div [style.color]="items.color"></div>
             </div>
-            <div id="selectcolor"></div>
+            <div id="selectcolor">
+                    <input value="{{valueColor}}" type="color" id="selector" (input)="getIconColor($event.target.value)" >
+            </div>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 
@@ -10,6 +10,10 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements OnInit {
+  
+
+color='#000000'
+colorProf="#FFFFFF" 
   
   value:Number=28; 
 
@@ -43,11 +47,13 @@ colores = [
 ]
 
 
-  constructor( ) { 
-    this.BuildForm();
+  constructor( private dataService:DataService ) { 
+    
   }
 
   ngOnInit(): void {
+    this.BuildForm();
+    
   }
 
   private BuildForm(){
@@ -65,8 +71,9 @@ colores = [
     
     event.preventDefault();
     if(this.form.valid){
-    const value=this.form.value;
-    window.localStorage.setItem("Values", JSON.stringify(value));
+    const formValue=this.form.value;
+    this.dataService.profileData$.emit(formValue);
+    this.form.reset();
   }else{
     this.form.markAllAsTouched();
   }
@@ -74,16 +81,26 @@ colores = [
 
   
   passColor(color){
-    window.localStorage.setItem("selectColor", JSON.stringify(color)); 
+    this.color=color; 
+    this.dataService.changeColor$.emit(color);
   }
 
   passColor2(col){
-    window.localStorage.setItem("selectIconColor", JSON.stringify(col)); 
+    this.colorProf=col;
+    this.dataService.changeColorProf$.emit(col);
   }
 
   pass(value){
-    window.localStorage.setItem("size", value);
+    this.dataService.letterSize$.emit(value);
     document.getElementById('temp').innerHTML= value +  ( 'px');
+  }
+
+  getColor(value){
+    this.dataService.changeColor$.emit(value);
+  }
+
+  getColorProf(value){
+    this.dataService.changeColorProf$.emit(value);
   }
 
 

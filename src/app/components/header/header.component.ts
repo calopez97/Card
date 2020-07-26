@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HeaderComponent implements OnInit {
  public titulo:string="¡CREA TU TARJETA!"
- @Input() public  changeTitle: String = '';
+ @Input() public  changeTitle = 'CREATE YOUR CARD';
 
   constructor() { }
 

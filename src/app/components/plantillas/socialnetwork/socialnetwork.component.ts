@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-socialnetwork',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./socialnetwork.component.scss']
 })
 export class SocialnetworkComponent implements OnInit {
+  @Output() dataIcon: EventEmitter<any[]> = new EventEmitter();
+
+  valueColor='#333FFF'; 
+
    networks = [
      {
        "id":1,
@@ -115,24 +120,30 @@ export class SocialnetworkComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
   }
 
   passBkColor(color){
-    window.localStorage.setItem("BkColor", JSON.stringify(color));
+    this.valueColor=color; 
+    this.dataService.changeColorIcon$.emit(color);
   }
 
   pass(icon){
-    window.localStorage.setItem("icons", JSON.stringify(icon)); 
+    this.dataIcon=icon;
+    this.dataService.icon$.emit(icon); 
   }
 
   iconSize(value){
-    window.localStorage.setItem("IconSize", value);
+    this.dataService.changeSizeIcon$.emit(value);
   }
 
   rouding(porcent){
-    window.localStorage.setItem("roudcorner", porcent);
+   this.dataService.roudingCorners$.emit(porcent);
+  }
+
+  getIconColor(value){
+    this.dataService.changeColorIcon$.emit(value); 
   }
 }

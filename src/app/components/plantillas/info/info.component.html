@@ -4,8 +4,7 @@
             <form class="formuser" [formGroup]="form" (ngSubmit)="save($event)">
                 <div class="user">
                     <label class="labels">Name!</label>
-                    <br>
-                    <input id="controls" type="text" formControlName="name">
+                    <input id="controls" type="text" name="form.name" formControlName="name" >
                     <br>
                     <div *ngIf="form.get('name').errors && form.get('name').touched">
                         <p *ngIf="form.get('name').hasError('required')">
@@ -15,8 +14,7 @@
                 </div>
                 <div class="user">
                     <label class="labels">Profession!</label>
-                    <br>
-                    <input id="controls" type="text" formControlName="titleprofession">
+                    <input id="controls" type="text" name="form.titleprofession" formControlName="titleprofession">
                     <br>
                     <div *ngIf="form.get('titleprofession').errors && form.get('titleprofession').touched">
                         <p *ngIf="form.get('titleprofession').hasError('required')">
@@ -28,7 +26,8 @@
             </form>
             <div class="uploadimage" role="button">
                 <div class="image">
-                    <h1><i class="fas fa-upload fa-3x"></i>UPLOAD IMAGE</h1>
+                    <input type="file" name="file" id="file" class="inputfile">
+                    <label for="file"><i style="margin-right: 10px;" class="fas fa-upload fa-lg"></i>UPLOAD IMAGE</label>
                 </div>
             </div>
         </div>
@@ -46,19 +45,23 @@
     <div class="colores">
         <h1 id="coletras">Name Color</h1>
         <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color"(click)=passColor(items)>
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color"(click)=passColor(items.color)>
                 <div [style.color]="items.color"></div>
             </div>
-            <div id="selectcolor"></div>
+            <div id="selectcolor">
+                <input value="{{color}}" type="color" id="selector" (input)="getColor($event.target.value)">
+            </div>
         </div>
     </div>
     <div class="colores">
         <h1 id="coletras">Profession Color</h1>
         <div class="paletacolores">
-            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color" (click)=passColor2(items)>
+            <div class="color" *ngFor="let items of colores" [style.background-color]="items.color" (click)=passColor2(items.color)>
                 <div [style.color]="items.color"></div>
             </div>
-            <div id="selectcolor"></div>
+            <div id="selectcolor">
+                <input value="{{colorProf}}" type="color" id="selector" (input)="getColorProf($event.target.value)">
+            </div>
         </div>
     </div>
 </div>

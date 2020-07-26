@@ -1,12 +1,17 @@
 .container {
-    width: 95%;
+    width: 96%;
     display: inline-flex;
-    background-color: rgba(192, 192, 192, 0.80);
+    background-color: rgba(204, 204, 204, 0.9);
     border-radius: 49px;
     flex-wrap: wrap !important;
     height: 480px;
     max-height: 1200px;
     overflow: scroll;  
+}
+.container::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;   
+    display: none;  
 }
 .links{
     display:flex;
@@ -14,6 +19,7 @@
     width: 100%;
     align-items: center;
     margin: 10px;
+    text-align: center;
 }
 .formlinks {
     width: 100%;

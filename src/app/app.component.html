@@ -1,14 +1,21 @@
-<app-header changeTitle="{{ sendChangeTitle }}"></app-header>
-<section class="allSections">
-  <section class="cards">
-    <app-menu (changeTitleText)="processChange($event)"></app-menu>
+<div class="presentation" *ngIf="isOn">
+  <button class="glow-on-hover" label="Contact" (click)="change()">LET'S EDIT</button>
+</div>
+<div class="edit" *ngIf="!isOn">
+  <app-header changeTitle="{{ sendChangeTitle }}"></app-header>
+  <section class="allSections">
+   
+      <section class="cards">
+        <app-menu (changeTitleText)="processChange($event)" ></app-menu>
+      </section>
+
+      <section class="list">
+        <router-outlet *ngIf="!isOn" ></router-outlet>
+      </section>
+    
+      <section class="preview">
+        <app-preview></app-preview>
+      </section>
+    
   </section>
-  <section class="list">
-    <!-- <router-outlet (active)="processLink($event)"></router-outlet> -->
-    <router-outlet></router-outlet>
-    <!-- <app-lista-plantillas (passLink)="processLink($event)"></app-lista-plantillas> -->
-  </section>
-  <section class="preview">
-    <app-preview></app-preview>
-  </section>
-</section>
+</div>

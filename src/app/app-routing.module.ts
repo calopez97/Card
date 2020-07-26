@@ -11,7 +11,7 @@ import {PagoComponent} from  './components/plantillas/pago/pago.component'
 
 
 const routes: Routes = [
-  { path: 'select-card', component: ListaPlantillasComponent, pathMatch: 'full' },
+  { path: 'select-card', component: ListaPlantillasComponent, pathMatch:'full'},
   { path: 'select-logo', component: SelLogoComponent },
   {path: 'info', component: InfoComponent },
   {path:'select-redes', component: SocialnetworkComponent},

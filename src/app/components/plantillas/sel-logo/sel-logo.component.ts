@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-sel-logo',
@@ -47,14 +48,20 @@ export class SelLogoComponent implements OnInit {
       "color":'#e0da2d'
     },
   ]
+  @Output() data: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
   }
   
   pass(dato){
     window.localStorage.setItem("selectLogo", JSON.stringify(dato));
+  }
+  
+  changeLogo(dato){
+    this.data=dato;
+    this.dataService.changeLogo$.emit(dato);
   }
 }
    

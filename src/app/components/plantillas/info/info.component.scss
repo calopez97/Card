@@ -1,12 +1,17 @@
 .container {
-    width: 95%;
+    width: 96%;
     display: inline-flex;
-    background-color: rgba(192, 192, 192, 0.80);
+    background-color: rgba(204, 204, 204, 0.9);
     border-radius: 49px;
     flex-wrap: wrap !important;
     height: 480px;
     max-height: 800px;
     overflow: scroll;
+}
+.container::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;   
+    display: none;  
 }
 .infouser {
     width: 100%;
@@ -37,6 +42,27 @@
             align-items: center;
             justify-content: center;
             justify-items: center;
+        }
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        .inputfile + label {
+            font-size: 1.45em;
+            font-weight: 700;
+            color: white;
+            background: transparent;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            height: 60px;
+            padding-top: 25px;
+            cursor: pointer;
+            color: #440ee6;;
         }
         h1 {
             color: #440ee6;;
@@ -106,6 +132,7 @@
         }
     }  
 }
+
 .options{
     width: 100%;
 }
@@ -200,13 +227,29 @@
     } 
 }
 #selectcolor{
+    margin:10px;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    margin: 10px;
-    background-image: url(https://cdn3.iconfinder.com/data/icons/edition/100/pen_3-512.png);
-    background-size:cover;
-    cursor: pointer;
+    input{
+        
+        border: none;
+        width: 30px;
+        height: 30px;
+        outline:none; 
+        
+    }
+   input::-webkit-color-swatch-wrapper {
+        padding: 0;
+    
+        -webkit-appearance: none !important;
+    }
+    input:-webkit-color-swatch {
+        border: none;
+        
+        -webkit-appearance: none !important;
+    }
+
+    
 }
 
     

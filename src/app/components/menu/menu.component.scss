@@ -24,6 +24,12 @@
         transition: all 0.5s;
     }
     .card:focus{
+        cursor: pointer;
+        width: 240px;
+        background: linear-gradient(70deg, #6798D3, #323ED2);
+        transition: all 0.5s;
+    }
+    .card:focus{
         border-color: transparent !important; 
         outline: none; 
     }

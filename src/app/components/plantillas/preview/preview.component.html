@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="card" [style.background-color]="jsonData.color">
+    <div class="card" [style.background-color]="fondo.color">
         <div class="logo">
             <div class="img-logo">
-                <img style="width: 180px;" src={{jsonLogo.logo}}  alt="">
+                <img style="width: 180px;" src={{logoimage.logo}}  alt="">
             </div>
         </div>
         <div class="user">
@@ -10,23 +10,19 @@
                 <img src={{profileimage}} alt="">
             </div>
             <div class="name-profile">
-                <h2 [style.color]="jsonColor.color" style="font-size:{{fontSize}}px;">{{values.name}}</h2>
-                <h4 [style.color]="jsonIconColor.color" style="font-size:16px;">{{values.titleprofession}}</h4>
+                <h2 [style.color]="colorName" style="font-size: {{letterSize}}px;">{{nombres.name}}</h2>
+                <h4 [style.color]="colorProf">{{nombres.titleprofession}}</h4>
             </div>
         </div>
         <div class="network">
-            <h3 [style.color]="jsonColor.color">Do you want contact me?</h3>
+            <h3 [style.color]="">Do you want contact me?</h3>
             <div class="social-networks">
-             <img style="background-color:{{BkColor.color}};
-              width: {{IconSize}}px;
-              height: {{IconSize}}px;
-              border-radius: {{roudingValue}}%;
-              "
-              src="{{icons.link}}"  alt="">
+             <img id="icons-image" tooltip="" placement="bottom" style="background-color: {{iconColor}};border-radius: {{roudValue}}%;width: {{iconSize}}px; height: {{iconSize}}px;"
+              src="{{icon}}"  alt="" >
             </div>
         </div>
         <div class="info">
-            <h2 [style.color]="jsonColor.color">www.paginaweb.com</h2>
+            <h2 [style.color]="">www.paginaweb.com</h2>
         </div>
     </div>
 

@@ -1,8 +1,85 @@
+.presentation{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url(https://ilinkcard.com/wp-content/uploads/2020/04/Logo-moradito.svg);
+    background-position:center;
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #eaebd1;
+    
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #8142f5;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transform: translate(10px, 190px);
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(35deg, #8142f5, #884afa, #9359ff, #9e79e2, #977fc4, #b188fc, #b68fff);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        animation: glowing 15s linear infinite;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: white;
+        font-weight: 700;
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #8142f5;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+}
 
 
 .allSections {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 0px;
     overflow: hidden;
     scroll-behavior: none;
@@ -12,7 +89,7 @@
     }
     .list{
         width: 57%;
-        height: 550px;
+        height: 538px;
     }
     .preview{
        width: 26%;

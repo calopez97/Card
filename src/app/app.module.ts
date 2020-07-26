@@ -19,11 +19,15 @@ import { DataService } from './services/data.service';
 // import { ImagenService } from './services/imagen.service';
 import { SelLogoComponent } from './components/plantillas/sel-logo/sel-logo.component';
 import { InfoComponent } from './components/plantillas/info/info.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SocialnetworkComponent } from './components/plantillas/socialnetwork/socialnetwork.component';
 import { LinkSocialNetworkComponent } from './components/plantillas/link-social-network/link-social-network.component';
 import { PagoComponent } from './components/plantillas/pago/pago.component';
 import { PreviewComponent } from './components/plantillas/preview/preview.component';
+
+
+import { TooltipModule } from 'ng2-tooltip-directive';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +50,8 @@ import { PreviewComponent } from './components/plantillas/preview/preview.compon
     AppRoutingModule,
     HttpClientModule, 
     ReactiveFormsModule, 
+    TooltipModule,
+    FormsModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

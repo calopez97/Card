@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
+  show=true;
+  isOn=true; 
   title = 'cards';
-  sendChangeTitle = '';
+  sendChangeTitle = '¡SELECT TEMPLATE!';
   sendLink = '';
+
+  
 
   ngOnInit() { }
 
@@ -16,6 +21,14 @@ export class AppComponent {
     this.sendChangeTitle = getText;
   }
 
+
+  change(){
+    this.isOn=!this.isOn;
+  }
+
+  showIn(){
+    this.show= !this.show;
+  }
   // processLink(getLink){
   //   console.log("HelloWorld." + getLink);
   //   this.sendLink = getLink;

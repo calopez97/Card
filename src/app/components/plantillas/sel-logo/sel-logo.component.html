@@ -1,16 +1,15 @@
 <div class="container">
-    <div class="uploadimage" role="button">
+    <div class="uploadimage">
         <div class="image">
-            <h1 style="color:white; margin-left: 30px;">
-                <i class="fas fa-upload"></i>
-                     UPLOAD LOGO</h1>
+            <input type="file" name="file" id="file" class="inputfile">
+            <label for="file"><i style="margin-right: 10px;" class="fas fa-upload fa-lg"></i>UPLOAD A LOGO</label>
         </div>
     </div>
     <div class="titulologos">
             <h1>Predesigned Logos</h1>
     </div>
     <div class="listlogos">
-        <div class="logos"*ngFor="let item of logos"  (click)= pass(item)>
+        <div class="logos"*ngFor="let item of logos"  (click)= "changeLogo(item)">
             <img src="{{item.logo}}" class="logo" style="background-size: cover;">
         </div>
     </div>

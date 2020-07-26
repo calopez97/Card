@@ -1,5 +1,6 @@
 <div class="container">
-    <section class="itemCard" *ngFor="let items of imagen" (click)= pass(items)>
-        <img src="{{ items.imagelink }}">
+    <section class="itemCard" *ngFor="let items of imagen" (click)= "changeTemplate(items)">
+        <div class="template" [style.background-color]="items.color"></div>
     </section>
 </div> 
+
